@@ -1,6 +1,6 @@
 # Math Flash Cards
 
-##This is a simple web-based, mobile-first flash card game for kids learning math. 
+## This is a simple web-based, mobile-first flash card game for kids learning math. 
 
 The purpose was to provide parents with a flash card game to play with elementary-aged children during COVID-19 quarantine/isolation. This repository can be cloned and run using `npm start`, or maybe accessed at http://math-flash-cards.com.
 
