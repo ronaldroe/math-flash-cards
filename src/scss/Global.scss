@@ -1,0 +1,148 @@
+@import "Reset";
+
+main{
+  position: relative;
+}
+
+.flash-card{
+  position: relative;
+  width: 50vmin;
+  margin-left: calc((100vw - 50vmin) / 2);
+  margin-top: 4vmax;
+  padding: 5vmin;
+  border-radius: 10vmin;
+  font-size: 15vh;
+  line-height: 1;
+  text-align: right;
+  box-shadow: 0.5vmin 0.5vmin 3vmin gray;
+  
+  &::before{
+    display: block;
+    position: absolute;
+    left: 5vmin;
+    bottom: 7vmin;
+    font-size: 8vh;
+    content: 'X';
+  }
+  
+  .b{
+    border-bottom: 2px solid #000;
+  }
+  
+}
+
+.numerals-list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 4vmax;
+  
+  .numeral{
+    height: 20vmin;
+    margin: 1vmin;
+    line-height: 20vmin;
+    border-radius: 3vmin;
+    text-align: center;
+    font-size: 8vh;
+    box-shadow: 0.05vmin 0.05vmin 1vmin gray;
+  }
+}
+
+.answer-block{
+  width: 50vmin;
+  margin-left: calc((100vw - 50vmin) / 2);
+  margin-top: 4vmax;
+  font-size: 10vmin;
+  
+  &::after{
+    clear: both;
+    content: '';
+    height: 0;
+    width: 0;
+    display: block;
+  }
+  
+  div{
+    border-radius: 1vmin;
+    border: 1px solid black;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    font-size: 4vmax;
+    float: left;
+  }
+  
+  .answer{
+    width: 60%;
+    font-size: 6vmax;
+  }
+  
+  .button{
+    width: 20%;
+  }
+  
+  .button.go{
+    color: green;
+  }
+  
+}
+
+header{
+
+  position: relative;
+  padding-left: 1vw;
+  height: 10vmax;
+  line-height: 10vmax;
+
+  .button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    font-size: 5vmax;
+    cursor: pointer;
+  }
+
+}
+
+.controls_outer{
+
+  display: none;
+  background-color: rgba(black,0.4);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &.open{display: block;}
+
+  .controls{
+
+    background-color: #fff;
+    position: fixed;
+    top: 30vh;
+    height: 30vh;
+    width: 40vw;
+    margin-left: 30vw;
+    text-align: center;
+    border-radius: 2vmin;
+    box-shadow: 0.5vmin 0.5vmin 3vmin black;
+    
+    .button{
+
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 5vh;
+      height: 7.5vh;
+      line-height: 7.5vh;
+      box-shadow: 0.5vmin 0.5vmin 3vmin gray;
+      border: 1px solid gray;
+      border-radius: 1vmin;
+      text-transform: uppercase;
+
+    }
+  }
+
+}
