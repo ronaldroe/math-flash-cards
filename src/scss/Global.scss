@@ -53,6 +53,17 @@ main{
   margin-left: calc((100vw - 50vmin) / 2);
   margin-top: 4vmax;
   font-size: 10vmin;
+  transition: background-color 0.2s ease-in-out;
+
+  &.correct{
+    background-color: rgba(green, 0.4);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &.incorrect{
+    background-color: rgba(red, 0.4);
+    transition: background-color 0.2s ease-in-out;
+  }
   
   &::after{
     clear: both;

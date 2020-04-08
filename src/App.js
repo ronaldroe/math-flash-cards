@@ -81,6 +81,7 @@ class App extends Component {
             update_answer={this.update_answer}
             delete_answer={this.delete_answer}
             submit_answer={this.submit_answer}
+            status={this.state.status}
           />
 
           <Numerals numeralSelect={this.numeralSelect} />
@@ -134,13 +135,13 @@ class App extends Component {
         current_card: prevState.cards[prevState.current_index + 1]
       }));
 
-      window.setTimeout(() => this.setState({status: ''}), 2000);
+      window.setTimeout(() => this.setState({status: ''}), 750);
       
     } else {
 
       this.setState({status: 'incorrect'});
 
-      window.setTimeout(() => this.setState({status: ''}), 2000);
+      window.setTimeout(() => this.setState({status: ''}), 1250);
 
     }
 
