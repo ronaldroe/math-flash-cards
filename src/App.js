@@ -126,13 +126,13 @@ class App extends Component {
 
     if(this.check_answer()){
 
-      localStorage.setItem('prev_card', JSON.stringify(this.state.cards[this.state.current_card.index + 1]));
+      localStorage.setItem('prev_card', JSON.stringify(this.state.cards[this.state.current_index + 1 < this.state.cards.length ? this.state.current_index + 1 : 0]));
       
       this.setState(prevState => ({
-        current_index: prevState.current_index <= prevState.cards.length ? prevState.current_index + 1 : 0,
+        current_index: prevState.current_index < prevState.cards.length - 1 ? prevState.current_index + 1 : 0,
         current_answer: '',
         status: 'correct',
-        current_card: prevState.cards[prevState.current_index + 1]
+        current_card: prevState.cards[prevState.current_index < prevState.cards.length - 1 ? prevState.current_index + 1 : 0]
       }));
 
       window.setTimeout(() => this.setState({status: ''}), 750);
