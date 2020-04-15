@@ -1,9 +1,9 @@
 import React from 'react';
 
-const FlashCard = props => {
+const MathFlashCard = props => {
 
   return(
-    <div className="flash-card">
+    <div className="flash-card" data-operation={props.current_operation}>
       <div className="a">{props.current_card.a}</div>
       <div className="b">{props.current_card.b}</div>
     </div>
@@ -11,4 +11,4 @@ const FlashCard = props => {
 
 };
 
-export default FlashCard;
+export default MathFlashCard;

@@ -22,7 +22,8 @@ main{
     left: 5vmin;
     bottom: 7vmin;
     font-size: 8vh;
-    content: 'X';
+    content: attr(data-operation);
+    text-transform: uppercase;
   }
   
   .b{
@@ -50,8 +51,8 @@ main{
 }
 
 .answer-block{
-  width: 50vmin;
-  margin-left: calc((100vw - 50vmin) / 2);
+  width: 80vmin;
+  margin-left: calc((100vw - 80vmin) / 2);
   margin-top: 4vmax;
   font-size: 10vmin;
   transition: background-color 0.2s ease-in-out;
@@ -135,9 +136,10 @@ header{
     background-color: #fff;
     position: fixed;
     top: 30vh;
-    height: 30vh;
-    width: 40vw;
-    margin-left: 30vw;
+    // height: 30vh;
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 1vh;
     text-align: center;
     border-radius: 2vmin;
     box-shadow: 0.5vmin 0.5vmin 3vmin black;
@@ -146,13 +148,21 @@ header{
 
       width: 90%;
       margin-left: 5%;
-      margin-top: 5vh;
+      margin-bottom: 1vh;
       height: 7.5vh;
       line-height: 7.5vh;
       box-shadow: 0.5vmin 0.5vmin 3vmin gray;
       border: 1px solid gray;
       border-radius: 1vmin;
+      font-size: 4vmax;
       text-transform: uppercase;
+
+      &.operation{
+        width: 20%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        float: left;
+      }
 
     }
   }
